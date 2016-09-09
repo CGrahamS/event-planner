@@ -74,4 +74,11 @@ public class EventTest {
     Event testEvent = new Event(10, "Light Refreshments", "Non-Alcoholic", "None", "Deluxe");
     assertEquals(130, testEvent.calculateCost());
   }
+
+  @Test
+  public void getPrice_getsPrice_80() {
+    Event testEvent = new Event(10, "Light Refreshments", "Non-Alcoholic", "None", "None");
+    testEvent.calculateCost();
+    assertEquals(80, testEvent.getPrice());
+  }
 }

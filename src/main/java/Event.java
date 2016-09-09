@@ -4,7 +4,7 @@ public class Event {
   private String mBeverage;
   private String mEntertainment;
   private String mDecoration;
-  private int mPrice = 0;
+  private int mPrice;
 
   public Event(int guests, String food, String beverages, String entertainment, String decoration) {
     mGuests = guests;
@@ -12,6 +12,7 @@ public class Event {
     mBeverage = beverages;
     mEntertainment = entertainment;
     mDecoration = decoration;
+    mPrice = 0;
   }
 
   public int getGuests() {
@@ -32,6 +33,10 @@ public class Event {
 
   public String getDecoration() {
     return mDecoration;
+  }
+
+  public int getPrice() {
+    return mPrice;
   }
 
   public int calculateCost() {
