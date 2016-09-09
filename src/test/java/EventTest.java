@@ -16,9 +16,14 @@ public class EventTest {
   }
 
   @Test
-  public void getFood_getsFood_Light_Refreshment() {
+  public void getFood_getsFood_LightRefreshment() {
     Event testEvent = new Event(10, "Light Refreshment", "Non-Alcoholic", "None");
     assertEquals("Light Refreshment", testEvent.getFood());
   }
 
+  @Test
+  public void getBeverages_getsBeverage_NonAlcholic() {
+    Event testEvent = new Event(10, "Light Refreshment", "Non-Alcoholic", "None");
+    assertEquals("Non-Alcoholic", testEvent.getBeverage());
+  }
 }
