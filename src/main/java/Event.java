@@ -29,20 +29,27 @@ public class Event {
   }
 
   public int calculateCost() {
+
     if (mFood.equalsIgnoreCase("Light Refreshment")) {
       mPrice += (3 * mGuests);
     } else if (mFood.equalsIgnoreCase("Hors d'oevures")) {
       mPrice += (5 * mGuests);
+    } else if (mFood.equalsIgnoreCase("Full Meal")) {
+      mPrice += (20 * mGuests);
     }
     if (mBeverage.equalsIgnoreCase("Non-Alcoholic")) {
       mPrice += (5 * mGuests);
     } else if (mBeverage.equalsIgnoreCase("Beer & Wine")) {
       mPrice += (20 * mGuests);
+    } else if (mBeverage.equalsIgnoreCase("Full Bar")) {
+      mPrice += (45 * mGuests);
     }
     if (mEntertainment.equalsIgnoreCase("None")) {
       mPrice += 0;
     } else if (mEntertainment.equalsIgnoreCase("DJ")) {
       mPrice += 150;
+    } else if (mEntertainment.equalsIgnoreCase("Live Band")) {
+      mPrice += 500;
     }
     return mPrice;
   }

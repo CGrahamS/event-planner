@@ -19,7 +19,7 @@ _This program will calculate an estimated cost for a party based on the options 
 * _Example 2 Output: $1400_
 
 * _Example 3 Input: Guests: 100, Food: Full Meal, Beverages: Full Bar; Entertainment: Live Band_
-* _Example 3 Output: $7,100_
+* _Example 3 Output: $7,000_
 
 ## Setup/Installation Requirements
 
