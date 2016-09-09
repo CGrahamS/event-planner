@@ -58,8 +58,20 @@ public class EventTest {
   }
 
   @Test
-  public void calculateCost_calculatesCostOfEvent_100() {
+  public void calculateCost_calculatesCostOfEventWithDecoration_80() {
+    Event testEvent = new Event(10, "Light Refreshments", "Non-Alcoholic", "None", "None");
+    assertEquals(80, testEvent.calculateCost());
+  }
+
+  @Test
+  public void calculateCost_calculatesCostOfEventWithDecoration_100() {
     Event testEvent = new Event(10, "Light Refreshments", "Non-Alcoholic", "None", "Standard");
     assertEquals(100, testEvent.calculateCost());
+  }
+
+  @Test
+  public void calculateCost_calculatesCostOfEventWithDecoration_130() {
+    Event testEvent = new Event(10, "Light Refreshments", "Non-Alcoholic", "None", "Deluxe");
+    assertEquals(130, testEvent.calculateCost());
   }
 }

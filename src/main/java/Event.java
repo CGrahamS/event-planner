@@ -57,8 +57,12 @@ public class Event {
     } else if (mEntertainment.equalsIgnoreCase("Live Band")) {
       mPrice += 500;
     }
-    if (mDecoration.equalsIgnoreCase("Standard")) {
+    if (mDecoration.equalsIgnoreCase("None")) {
+      mPrice += 0;
+    } else if (mDecoration.equalsIgnoreCase("Standard")) {
       mPrice += (2 * mGuests);
+    } else if (mDecoration.equalsIgnoreCase("Deluxe")) {
+      mPrice += (5 * mGuests);
     }
     return mPrice;
   }
