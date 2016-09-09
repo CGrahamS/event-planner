@@ -36,7 +36,7 @@ public class Event {
 
   public int calculateCost() {
 
-    if (mFood.equalsIgnoreCase("Light Refreshment")) {
+    if (mFood.equalsIgnoreCase("Light Refreshments")) {
       mPrice += (3 * mGuests);
     } else if (mFood.equalsIgnoreCase("Hors d'oevures")) {
       mPrice += (5 * mGuests);
@@ -56,6 +56,9 @@ public class Event {
       mPrice += 150;
     } else if (mEntertainment.equalsIgnoreCase("Live Band")) {
       mPrice += 500;
+    }
+    if (mDecoration.equalsIgnoreCase("Standard")) {
+      mPrice += (2 * mGuests);
     }
     return mPrice;
   }
