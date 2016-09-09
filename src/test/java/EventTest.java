@@ -10,8 +10,15 @@ public class EventTest {
   }
 
   @Test
-  public void getGuests_getGuests_10() {
+  public void getGuests_getsGuests_10() {
     Event testEvent = new Event(10, "Light Refereshment", "Non-Alcholic", "None");
     assertEquals(10, testEvent.getGuests());
   }
+
+  @Test
+  public void getFood_getsFood_Light_Refreshment() {
+    Event testEvent = new Event(10, "Light Refreshment", "Non-Alcoholic", "None");
+    assertEquals("Light Refreshment", testEvent.getFood());
+  }
+
 }
