@@ -39,37 +39,40 @@ public class Event {
     return mPrice;
   }
 
+  String[] foodSelectionArray = {"Light Refreshments", "Hors d'oevures", "Full Meal"};
+  int[] foodPriceArray = {3, 5, 20};
+  String[] beverageSelectionArray = {"Non-Alcoholic", "Beer & Wine", "Full Bar"};
+  int[] beveragePriceArray = {5, 20, 45};
+  String[] entertainmentSelectionArray = {"None", "DJ", "Live Band"};
+  int[] entertainmentPriceArray = {0, 150, 500};
+  String[] decorationSelectionArray = {"None", "Standard", "Deluxe"};
+  int[] decorationPriceArray = {0, 2, 5};
+
   public int calculateCost() {
 
-    if (mFood.equalsIgnoreCase("Light Refreshments")) {
-      mPrice += (3 * mGuests);
-    } else if (mFood.equalsIgnoreCase("Hors d'oevures")) {
-      mPrice += (5 * mGuests);
-    } else if (mFood.equalsIgnoreCase("Full Meal")) {
-      mPrice += (20 * mGuests);
+    for (int i = 0; i < foodSelectionArray.length; i++) {
+      if (mFood.equalsIgnoreCase(foodSelectionArray[i])) {
+        mPrice += (foodPriceArray[i] * mGuests);
+      }
     }
-    if (mBeverage.equalsIgnoreCase("Non-Alcoholic")) {
-      mPrice += (5 * mGuests);
-    } else if (mBeverage.equalsIgnoreCase("Beer & Wine")) {
-      mPrice += (20 * mGuests);
-    } else if (mBeverage.equalsIgnoreCase("Full Bar")) {
-      mPrice += (45 * mGuests);
+
+    for (int i = 0; i < beverageSelectionArray.length; i++) {
+      if (mBeverage.equalsIgnoreCase(beverageSelectionArray[i])) {
+        mPrice += (beveragePriceArray[i] * mGuests);
+      }
     }
-    if (mEntertainment.equalsIgnoreCase("None")) {
-      mPrice += 0;
-    } else if (mEntertainment.equalsIgnoreCase("DJ")) {
-      mPrice += 150;
-    } else if (mEntertainment.equalsIgnoreCase("Live Band")) {
-      mPrice += 500;
+
+    for (int i = 0; i < entertainmentSelectionArray.length; i++) {
+      if(mEntertainment.equalsIgnoreCase(entertainmentSelectionArray[i])) {
+        mPrice += entertainmentPriceArray[i];
+      }
     }
-    if (mDecoration.equalsIgnoreCase("None")) {
-      mPrice += 0;
-    } else if (mDecoration.equalsIgnoreCase("Standard")) {
-      mPrice += (2 * mGuests);
-    } else if (mDecoration.equalsIgnoreCase("Deluxe")) {
-      mPrice += (5 * mGuests);
+
+    for (int i = 0; i < decorationSelectionArray.length; i++) {
+      if(mDecoration.equalsIgnoreCase(decorationSelectionArray[i])) {
+        mPrice += (decorationPriceArray[i] * mGuests);
+      }
     }
     return mPrice;
   }
-
 }
